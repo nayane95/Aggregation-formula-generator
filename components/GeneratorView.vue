@@ -37,114 +37,10 @@
         </v-btn>
       </v-card>
     </v-fab-transition>
-    <v-card elevation="2">
-      <!-- <AggregateFunctions /> -->
-      <v-btn depressed color="error" @click="setToFormula(`SUM( )`)">
-        SUM ( )
-      </v-btn>
-      <v-btn depressed color="error" @click="setToFormula(`COUNT( )`)">
-        COUNT ( )
-      </v-btn>
-      <v-btn depressed color="error" @click="setToFormula(`AVG( )`)">
-        AVG ( )
-      </v-btn>
-      <v-btn depressed color="error" @click="setToFormula(`MAX( )`)">
-        MAX ( )
-      </v-btn>
-      <v-btn depressed color="error" @click="setToFormula(`MIN( )`)">
-        MIN ( )
-      </v-btn>
-    </v-card>
-    <v-card elevation="3" class="mt-3">
-      <!-- <AggregateFunctions /> -->
-      <v-row class="mt-2">
-        <v-col>
-          <v-btn class="mx-2" fab dark color="indigo" small @click="setToFormula(` + `)">
-            <v-icon dark>
-              mdi-plus
-            </v-icon>
-          </v-btn>
-        </v-col>
-        <v-col>
-          <v-btn class="mx-2" fab dark color="indigo" small @click="setToFormula(` - `)">
-            <v-icon dark>
-              mdi-minus
-            </v-icon>
-          </v-btn>
-        </v-col>
-        <v-col>
-          <v-btn class="mx-2" fab dark color="indigo" small @click="setToFormula(` / `)">
-            <v-icon dark>
-              mdi-slash-forward
-            </v-icon>
-          </v-btn>
-        </v-col>
-        <v-col>
-          <v-btn class="mx-2" fab dark color="indigo" small @click="setToFormula(` * `)">
-            <v-icon dark>
-              mdi-close
-            </v-icon>
-          </v-btn>
-        </v-col>
-        <v-col>
-          <v-btn class="mx-2" fab dark color="indigo" small @click="setToFormula(` % `)">
-            <v-icon dark>
-              mdi-percent
-            </v-icon>
-          </v-btn>
-        </v-col>
-        <v-col>
-          <v-btn class="mx-2" fab dark color="indigo" small @click="setToFormula(` ( `)">
-          (
-          </v-btn>
-        </v-col>
-        <v-col>
-           <v-btn class="mx-2" fab dark color="indigo" small @click="setToFormula(` ) `)">
-            )
-          </v-btn>
-        </v-col>
-      </v-row>
-    </v-card>
-    <v-card elevation="3" class="mt-3">
-      <!-- <Logical Operators /> -->
-      <v-row class="mt-2">
-        <v-col>
-          <v-btn class="mx-2" fab dark color="#4f4f4f" small @click="setToFormula(` AND `)">
-            <small>AND</small>
-          </v-btn>
-        </v-col>
-        <v-col>
-          <v-btn class="mx-2" fab dark color="#4f4f4f" small @click="setToFormula(` OR `)">
-            <small>OR</small>
-          </v-btn>
-        </v-col>
-        <v-col>
-          <v-btn class="mx-2" fab dark color="#4f4f4f" small @click="setToFormula(` NOT `)">
-            <small>NOT</small>
-          </v-btn>
-        </v-col>
-        <v-col>
-          <v-btn class="mx-2" fab dark color="#4f4f4f" small @click="setToFormula(` && `)">
-            <small>&&</small>
-          </v-btn>
-        </v-col>
-        <v-col>
-          <v-btn class="mx-2" fab dark color="#4f4f4f" small @click="setToFormula(` || `)">
-            <small>||</small>
-          </v-btn>
-        </v-col>
-        <v-col>
-          <v-btn class="mx-2" fab dark color="#4f4f4f" small @click="setToFormula(` > `)">
-          >
-          </v-btn>
-        </v-col>
-        <v-col>
-           <v-btn class="mx-2" fab dark color="#4f4f4f" small @click="setToFormula(` < `)">
-          <
-          </v-btn>
-        </v-col>
-      </v-row>
-    </v-card>
+    <AggregateFunctions @clicked="insertTextToTextArea"/>
+    <ArithmaticOperations @clicked="insertTextToTextArea"/>
+    <LogicalOperators @clicked="insertTextToTextArea"/>
+
   </div>
 </template>
 
@@ -177,9 +73,6 @@ export default {
       this.insertTextToTextArea(text);
       this.expand = !this.expand;
       this.reset();
-    },
-    setToFormula(fn) {
-      this.insertTextToTextArea(fn);
     },
 
     insertTextToTextArea(text) {
