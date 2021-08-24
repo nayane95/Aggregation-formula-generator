@@ -77,22 +77,20 @@ export default {
 
     insertTextToTextArea(text) {
       const textarea = this.$refs.textarea.$refs.input;
-
       // Insert text into current position
-      let cursorPos = textarea.selectionEnd; // Get current Position
+      let cursorPos = textarea.selectionStart; // Get current Position
       if (cursorPos === undefined) {
         cursorPos = 0
       }
       this.formula =
         this.formula.substring(0, cursorPos) +
         text +
-        this.formula.substring(cursorPos);
-
-      // Get new cursor position
-      cursorPos += text.length;
+        this.formula.substring(cursorPos,textarea.value.length);
 
       // Wait until vue finishes rendering the new text and set the cursor position.
-      this.$nextTick(() => textarea.setSelectionRange(cursorPos, cursorPos));
+      this.$nextTick().then(() => {
+        textarea.selectionStart = cursorPos + text.length
+      })
     },
     cursorPosition(){
       const textarea = this.$refs.textarea.$refs.input;
