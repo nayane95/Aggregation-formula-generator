@@ -2,37 +2,37 @@
     <v-card elevation="3" class="mt-3">
       <!-- <Logical Operators /> -->
       <v-row class="mt-2">
-        <v-col>
+        <v-col class="d-flex justify-center">
           <v-btn class="mx-2" fab dark color="#4f4f4f" small @click="onClickButton(` AND `)">
             <small>AND</small>
           </v-btn>
         </v-col>
-        <v-col>
+        <v-col class="d-flex justify-center">
           <v-btn class="mx-2" fab dark color="#4f4f4f" small @click="onClickButton(` OR `)">
             <small>OR</small>
           </v-btn>
         </v-col>
-        <v-col>
+        <v-col class="d-flex justify-center">
           <v-btn class="mx-2" fab dark color="#4f4f4f" small @click="onClickButton(` NOT `)">
             <small>NOT</small>
           </v-btn>
         </v-col>
-        <v-col>
+        <v-col class="d-flex justify-center">
           <v-btn class="mx-2" fab dark color="#4f4f4f" small @click="onClickButton(` && `)">
             <small>&&</small>
           </v-btn>
         </v-col>
-        <v-col>
+        <v-col class="d-flex justify-center">
           <v-btn class="mx-2" fab dark color="#4f4f4f" small @click="onClickButton(` || `)">
             <small>||</small>
           </v-btn>
         </v-col>
-        <v-col>
+        <v-col class="d-flex justify-center">
           <v-btn class="mx-2" fab dark color="#4f4f4f" small @click="onClickButton(` > `)">
           >
           </v-btn>
         </v-col>
-        <v-col>
+        <v-col class="d-flex justify-center">
            <v-btn class="mx-2" fab dark color="#4f4f4f" small @click="onClickButton(` < `)">
           <
           </v-btn>

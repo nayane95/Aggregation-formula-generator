@@ -1,21 +1,33 @@
 <template>
-    <v-card elevation="2">
+    <v-card elevation="2" class="mt-3">
       <!-- <AggregateFunctions /> -->
-      <v-btn depressed color="error" @click="onClickButton(`SUM( )`)">
-        SUM ( )
-      </v-btn>
-      <v-btn depressed color="error" @click="onClickButton(`COUNT( )`)">
-        COUNT ( )
-      </v-btn>
-      <v-btn depressed color="error" @click="onClickButton(`AVG( )`)">
-        AVG ( )
-      </v-btn>
-      <v-btn depressed color="error" @click="onClickButton(`MAX( )`)">
-        MAX ( )
-      </v-btn>
-      <v-btn depressed color="error" @click="onClickButton(`MIN( )`)">
-        MIN ( )
-      </v-btn>
+      <v-row>
+        <v-col class="d-flex justify-center">
+          <v-btn depressed color="error" @click="onClickButton(`SUM( )`)">
+            SUM ( )
+          </v-btn>
+        </v-col>
+        <v-col class="d-flex justify-center">
+          <v-btn depressed color="error" @click="onClickButton(`COUNT( )`)">
+            COUNT ( )
+          </v-btn>
+        </v-col>
+        <v-col class="d-flex justify-center">
+          <v-btn depressed color="error" @click="onClickButton(`AVG( )`)">
+            AVG ( )
+          </v-btn>
+        </v-col>
+        <v-col class="d-flex justify-center">
+          <v-btn depressed color="error" @click="onClickButton(`MAX( )`)">
+            MAX ( )
+          </v-btn>
+        </v-col>
+        <v-col class="d-flex justify-center">
+          <v-btn depressed color="error" @click="onClickButton(`MIN( )`)">
+            MIN ( )
+          </v-btn>
+        </v-col>
+      </v-row>
     </v-card>
 </template>
 

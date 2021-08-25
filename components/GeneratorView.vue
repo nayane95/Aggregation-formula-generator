@@ -29,10 +29,11 @@
             :items="columns"
             label="Column Name"
             v-model="column"
+            v-on:change="onColumnChange"
             solo
           ></v-select>
         </div>
-        <v-btn color="primary" @click="setColumnName()">
+        <v-btn color="primary" @click="setColumnName()" v-show="isEnableInsertBtn">
           Insert
         </v-btn>
       </v-card>
@@ -56,6 +57,7 @@ export default {
     ],
     columns: [],
     expand: false,
+    isEnableInsertBtn: false,
     formula: ""
   }),
   methods: {
@@ -68,10 +70,16 @@ export default {
         });
       }
     },
+    onColumnChange(){
+      if (this.schema) {
+        this.isEnableInsertBtn=true;
+      }
+    },
     setColumnName() {
       let text = `("` + this.schema + `.` + this.column + `") `;
       this.insertTextToTextArea(text);
       this.expand = !this.expand;
+      this.isEnableInsertBtn=false,
       this.reset();
     },
 

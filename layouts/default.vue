@@ -18,7 +18,7 @@
       :absolute="!fixed"
       app
     >
-      <span>&copy; {{ new Date().getFullYear() }}</span>
+      <span>&copy; Nayanajith Priyasad - {{ new Date().getFullYear() }}</span>
     </v-footer>
   </v-app>
 </template>

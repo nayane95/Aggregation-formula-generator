@@ -2,47 +2,47 @@
     <v-card elevation="3" class="mt-3">
       <!-- <Aritmatic operations /> -->
       <v-row class="mt-2">
-        <v-col>
+        <v-col class="d-flex justify-center">
           <v-btn class="mx-2" fab dark color="indigo" small @click="onClickButton(` + `)">
             <v-icon dark>
               mdi-plus
             </v-icon>
           </v-btn>
         </v-col>
-        <v-col>
+        <v-col class="d-flex justify-center">
           <v-btn class="mx-2" fab dark color="indigo" small @click="onClickButton(` - `)">
             <v-icon dark>
               mdi-minus
             </v-icon>
           </v-btn>
         </v-col>
-        <v-col>
+        <v-col class="d-flex justify-center">
           <v-btn class="mx-2" fab dark color="indigo" small @click="onClickButton(` / `)">
             <v-icon dark>
               mdi-slash-forward
             </v-icon>
           </v-btn>
         </v-col>
-        <v-col>
+        <v-col class="d-flex justify-center">
           <v-btn class="mx-2" fab dark color="indigo" small @click="onClickButton(` * `)">
             <v-icon dark>
               mdi-close
             </v-icon>
           </v-btn>
         </v-col>
-        <v-col>
+        <v-col class="d-flex justify-center">
           <v-btn class="mx-2" fab dark color="indigo" small @click="onClickButton(` % `)">
             <v-icon dark>
               mdi-percent
             </v-icon>
           </v-btn>
         </v-col>
-        <v-col>
+        <v-col class="d-flex justify-center">
           <v-btn class="mx-2" fab dark color="indigo" small @click="onClickButton(` ( `)">
           (
           </v-btn>
         </v-col>
-        <v-col>
+        <v-col class="d-flex justify-center">
            <v-btn class="mx-2" fab dark color="indigo" small @click="onClickButton(` ) `)">
             )
           </v-btn>
