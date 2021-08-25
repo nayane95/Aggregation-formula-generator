@@ -100,13 +100,6 @@ export default {
         textarea.selectionStart = cursorPos + text.length
       })
     },
-    cursorPosition(){
-      const textarea = this.$refs.textarea.$refs.input;
-
-      // Insert text into current position
-      let cursorPos = textarea.selectionEnd; // Get current Position
-      console.log(cursorPos);
-    },
     reset() {
       this.schema = null;
       this.column = null;
